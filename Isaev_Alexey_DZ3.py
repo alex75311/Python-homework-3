@@ -16,7 +16,7 @@ def int_func(word):
 print(int_func('types'))
 
 
-# step2
+# step 2
 def int_func(*word):
     for w in word:
         result = []
@@ -29,7 +29,7 @@ print(int_func(
     'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
 
 
-# step3
+# step 3
 def ext_func (func, s):
     result = []
     for w in s.split():
