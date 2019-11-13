@@ -30,10 +30,12 @@ print(int_func(
 
 
 # step 3
-def ext_func (func, s):
+def ext_func(func, s):
     result = []
     for w in s.split():
         result.append(func(w))
     return ' '.join(result)
+
+
 print(ext_func(int_func,
-    'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
+               'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
