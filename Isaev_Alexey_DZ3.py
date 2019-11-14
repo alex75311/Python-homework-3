@@ -9,15 +9,15 @@
 
 
 # step 1
-def int_func(word):
+def int_func_1(word):
     return word[:1].upper() + word[1:].lower()
 
 
-print(int_func('types'))
+print(int_func_1('types'))
 
 
 # step 2
-def int_func(*word):
+def int_func_2(*word):
     for w in word:
         result = []
         for word in w.split():
@@ -25,7 +25,7 @@ def int_func(*word):
     return ' '.join(result)
 
 
-print(int_func(
+print(int_func_2(
     'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
 
 
@@ -37,5 +37,18 @@ def ext_func(func, s):
     return ' '.join(result)
 
 
-print(ext_func(int_func,
+print(ext_func(int_func_1,
+               'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
+
+
+# step 4
+def int_func_3(word):
+    result = ''
+    result += chr(ord(word[:1]) - 32) + word[1:]
+    return result
+
+
+print(int_func_3('types'))
+
+print(ext_func(int_func_3,
                'some types, such as ints, are able to use a more efficient algorithm when invoked using the three argument form.'))
